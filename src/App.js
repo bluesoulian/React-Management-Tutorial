@@ -9,7 +9,7 @@ const customers = [
     'birthday': '961222',
     'gender': '남자',
     'job': '대학생'
-  }
+  },
   {
     'id': 2,
     'image': 'http://placeimg.com/64/64/2',
@@ -17,7 +17,7 @@ const customers = [
     'birthday': '881218',
     'gender': '남자',
     'job': '변호사'
-  }
+  },
   {
     'id': 3,
     'image': 'http://placeimg.com/64/64/3',
@@ -29,12 +29,12 @@ const customers = [
 ]
 
 class App extends React.Component {
-  render()
-  {
+  render() {
+    return(
     <div>
       {
         customers.map(c => {
-          return(
+            return (
               <Customer
                 key={c.id}
                 id={c.id}
@@ -44,10 +44,11 @@ class App extends React.Component {
                 gender = {c.gender}
                 job = {c.job}
                 />
-              )
+            )
         }) 
       }
     </div>
+    )
   }
 }
 
